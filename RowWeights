@@ -1,0 +1,15 @@
+function rowWeights(array){
+  let empty = [];
+  for (let i=0; i < array.length; i+=2) {
+    empty.push(array[i]);
+    }
+    let oddSum = empty.reduce( (a, b) => a + b);
+
+  let empty2 = [];
+  for (let j=1; j < array.length; j+=2) {
+    empty2.push(array[j]);
+    }
+    let evenSum = empty2.reduce( (c, d) => c + d, 0);
+  
+  return [oddSum, evenSum];
+}
